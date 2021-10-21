@@ -11,7 +11,7 @@
 <body>
 		<div class="wrapper fadeInDown row text-center" style="width: 100%; height: 100vh">
 			<div id="formContent" class="col-md-4 offset-4 border-dark bg-light p-4 my-auto ">
-				<h1>Dahal Kirana Pasal</h1>
+				<h1>Homendra Kirana Pasal</h1>
 
 				<!-- Icon -->
 				<div class="fadeIn first">
@@ -69,7 +69,7 @@
 	<?php
 	foreach($js as $script){
 		?>
-		<script src="assets/js/<?=$script?>.css"></script>
+		<script src="assets/js/<?=$script?>.js"></script>
 		<?php
 	}
 	?>

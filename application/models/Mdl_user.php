@@ -18,6 +18,7 @@ class Mdl_user extends CI_Model
 				$this->update(array('id'=>$user_row->id),array('login_attempts' => 0 ));
 				$this->update(array('id'=>$user_row->id),array('last_login' => date('Y-m-d h:i:s') ));
 				$this->session->set_userdata('logged_in',TRUE);
+				$this->session->set_userdata('user_id',$user_row->id);
 				$this->session->set_userdata('user_type',$user_row->user_type);
 				$this->session->set_userdata('user_name',$user_row->user_name);
 				$this->session->set_userdata('user_email',$user_row->email);
@@ -36,8 +37,19 @@ class Mdl_user extends CI_Model
 		return $this->db->get($this->_tableName)->row();
 	}
 
-	public function getWhere($data){
+	public function getAll($limit='', $offset="", $order_by = 'id', $dir = 'DESC'){
+		$this->db->select('id,first_name,last_name,user_name,email,address,contact_no,disabled');
+		$this->db->order_by($order_by, $dir);
+		if(!empty($limit) && !empty($offset)){
+			$this->db->limit($limit, $offset);
+		}
+		$this->db->where_not_in('id',$this->session->userdata('user_id'));
+		return $this->db->get($this->_tableName)->result();
+	}
+
+	public function getWhere($data, $order_by = 'id', $dir = 'DESC'){
 		$this->db->where($data);
+		$this->db->order_by($order_by,$dir);
 		return $this->db->get($this->_tableName)->result();
 	}
 

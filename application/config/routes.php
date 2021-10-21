@@ -54,8 +54,37 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'userController';
-$route['home'] = 'homeController';
 $route['logout'] = 'userController/logout';
+
+$route['home'] = 'homeController';
+
 $route['addUser'] = 'userController/addUser';
 $route['userList'] = 'userController/userList';
 $route['userDetails'] = 'userController/userDetails';
+$route['editUser'] = 'userController/editUser';
+$route['editUser/(:num)'] = 'userController/editUser';
+$route['deleteUser/(:num)'] = 'userController/deleteUser';
+
+$route['addProduct'] = 'productController/addProduct';
+$route['productList'] = 'productController/productList';
+$route['productDetails'] = 'productController/productDetails';
+$route['editProduct'] = 'productController/editProduct';
+$route['editProduct/(:num)'] = 'productController/editProduct';
+$route['deleteProduct/(:num)'] = 'productController/deleteProduct';
+
+
+$route['addVendor'] = 'vendorController/addVendor';
+$route['vendorList'] = 'vendorController/vendorList';
+$route['vendorDetails'] = 'vendorController/vendorDetails';
+$route['editVendor'] = 'vendorController/editVendor';
+$route['editVendor/(:num)'] = 'vendorController/editVendor';
+$route['deleteVendor/(:num)'] = 'vendorController/deleteVendor';
+
+
+$route['addCustomer'] = 'customerController/addCustomer';
+$route['customerList'] = 'customerController/customerList';
+$route['customerDetails'] = 'customerController/customerDetails';
+$route['editCustomer'] = 'customerController/editCustomer';
+$route['editCustomer/(:num)'] = 'customerController/editCustomer';
+$route['deleteCustomer/(:num)'] = 'customerController/deleteCustomer';
+

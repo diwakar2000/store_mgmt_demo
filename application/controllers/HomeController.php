@@ -8,6 +8,7 @@ class HomeController extends CI_Controller
 		parent::__construct();
 	}
 	public function index(){
+		check_login();
 		$send['title'] = 'Home';
 		$this->load->view('includes/header',$send);
 		$this->load->view('includes/navbar');

@@ -15,6 +15,20 @@ html,body {
 	color:red;
 }
 
+.manualAlertBox{
+	display: none;
+	position: absolute;
+	top: 3em;
+	right: 0;
+	width: 20rem;
+	border: 1px solid gray;
+	border-radius: 5px;
+	box-shadow: #1d2124;
+}
+
+
+
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -26,6 +40,12 @@ input::-webkit-inner-spin-button {
 input[type=number] {
 	-moz-appearance: textfield;
 }
+
+
+
+
+
+
 /* ANIMATIONS */
 
 /* Simple CSS3 Fade-in-down Animation */
