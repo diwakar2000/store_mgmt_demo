@@ -63,6 +63,7 @@ class UserController extends CI_Controller
 		check_admin_privilege();
 		$send = array();
 		if($_POST){
+
 			$this->form_validation->set_rules('first_name','First name','trim|required|max_length[20]');
 			$this->form_validation->set_rules('last_name','Last Name','trim|required|max_length[20]');
 			$this->form_validation->set_rules('user_name','User name','trim|required|max_length[20]|min_length[6]');
@@ -174,7 +175,12 @@ class UserController extends CI_Controller
 	}
 
 	public function userDetails(){
-
+		$send['title'] = 'User Info';
+		$this->load->view('includes/header',$send);
+		$this->load->view('includes/navbar');
+		$send['user'] = $this->Mdl_user->getById($this->session->userdata('user_id'));
+		$this->load->view('userInfo',$send);
+		$this->load->view('includes/footer');
 	}
 
 	public function logout(){

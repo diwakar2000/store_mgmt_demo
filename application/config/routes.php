@@ -88,3 +88,4 @@ $route['editCustomer'] = 'customerController/editCustomer';
 $route['editCustomer/(:num)'] = 'customerController/editCustomer';
 $route['deleteCustomer/(:num)'] = 'customerController/deleteCustomer';
 
+$route['daily_transaction'] = 'transactionController/dailyTransaction';

@@ -10,7 +10,7 @@ class ProductController extends CI_Controller
 	}
 
 	public function productList(){
-		$sendHeader['title'] = 'User List';
+		$sendHeader['title'] = 'Product List';
 		$this->load->view('includes/header',$sendHeader);
 		$this->load->view('includes/navbar');
 		$send['products'] = $this->Mdl_product->getAll();
@@ -31,7 +31,8 @@ class ProductController extends CI_Controller
 			else {
 				$saveData = array(
 					'name' => $this->input->post('name'),
-					'price' => $this->input->post('price'),
+					'price_wholesale' => $this->input->post('price'),
+					'price_retail' => $this->input->post('price'),
 					'created_at' => date('Y-m-d h:i:s'),
 					'updated_at' => date('Y-m-d h:i:s')
 				);
@@ -41,7 +42,7 @@ class ProductController extends CI_Controller
 				}
 			}
 		}
-		$sendHeader['title'] = "Add User";
+		$sendHeader['title'] = "Add Product";
 		$this->load->model('Mdl_vendor');
 		$send['vendors'] = $this->Mdl_vendor->getAll();
 		$this->load->view('includes/header',$sendHeader);

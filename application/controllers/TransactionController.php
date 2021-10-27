@@ -31,7 +31,7 @@ class TransactionController extends CI_Controller
 					$this->form_validation->set_rules('customer_id','Customer Name','trim|required');
 					$credit = $price * $quantity;
 					$cash = 0;
-				} else {
+				} elseif($payment_type == 'both') {
 					$this->form_validation->set_rules('cash','Cash','trim|required');
 					$cash = $this->input->post('cash');
 					$credit = ($price * $quantity) - $cash;
