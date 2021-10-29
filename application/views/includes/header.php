@@ -22,6 +22,6 @@
 
 	<title><?=$title?></title>
 </head>
-<body>
+<body class="bg-secondary">
 
 

@@ -54,7 +54,11 @@ class TransactionController extends CI_Controller
 		$sendHeader['title'] = 'Daily Transaction';
 		$this->load->view('includes/header',$sendHeader);
 		$this->load->view('includes/navbar');
-		$this->load->view('customer/customerList',$send);
+		$this->load->model('Mdl_product');
+		$this->load->model('Mdl_customer');
+		$send['products'] = $this->Mdl_product->getAll();
+		$send['customers'] = $this->Mdl_customer->getAll();
+		$this->load->view('dailyTransaction',$send);
 		$this->load->view('includes/footer');
 	}
 

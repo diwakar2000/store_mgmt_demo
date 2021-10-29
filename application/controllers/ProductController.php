@@ -23,7 +23,8 @@ class ProductController extends CI_Controller
 		$send = array();
 		if($_POST){
 			$this->form_validation->set_rules('name','Name','trim|required|max_length[50]');
-			$this->form_validation->set_rules('price','Price','trim|required');
+			$this->form_validation->set_rules('price_wholesale','Price','trim|required');
+			$this->form_validation->set_rules('price_retail','Price','trim|required');
 
 			if($this->form_validation->run() === FALSE){
 				$send['errors'] = validation_errors();
@@ -31,8 +32,8 @@ class ProductController extends CI_Controller
 			else {
 				$saveData = array(
 					'name' => $this->input->post('name'),
-					'price_wholesale' => $this->input->post('price'),
-					'price_retail' => $this->input->post('price'),
+					'price_wholesale' => $this->input->post('price_wholesale'),
+					'price_retail' => $this->input->post('price_retail'),
 					'created_at' => date('Y-m-d h:i:s'),
 					'updated_at' => date('Y-m-d h:i:s')
 				);

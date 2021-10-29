@@ -9,7 +9,7 @@
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Products
+						Product
 					</a>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a class="dropdown-item" href="<?=site_url('productList')?>"><i class="fa fa-list"></i> Product List</a>
@@ -18,7 +18,7 @@
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Vendors
+						Vendor
 					</a>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a class="dropdown-item" href="<?=site_url('vendorList')?>"><i class="fa fa-list"></i> Vendor List</a>
@@ -27,7 +27,7 @@
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Customers
+						Customer
 					</a>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a class="dropdown-item" href="<?=site_url('customerList')?>"><i class="fa fa-list"></i> Customer List</a>

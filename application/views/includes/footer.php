@@ -23,7 +23,13 @@
 					}
 				});
 
-				$('.select2').select2();
+				$('.select2').select2({
+				});
+				if ($('.select2').hasClass("select2-hidden-accessible")) {
+					$('.select2-selection').css('height','100%');
+					$('.select2-selection__arrow').css('height','100%');
+					// $('.select2-selection__rendered').css('margin-top','5px');
+				}
 			});
 
 			const deleteRow = (Id, type) => {

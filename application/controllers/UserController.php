@@ -53,9 +53,7 @@ class UserController extends CI_Controller
 		$send['title'] = 'Login';
 		$send['css'] = array('global-style','bootstrap.min');
 		$send['js'] = array('jquery-3.6.0.min','bootstrap.min');
-		$this->load->view('includes/header',$send);
 		$this->load->view('login',$send);
-		$this->load->view('includes/footer');
 	}
 
 	public function addUser(){
